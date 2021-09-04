@@ -120,7 +120,7 @@ async def hello(ctx):
 # this command responds with a list of command the bot works with 
 @client.command()
 async def commands(ctx):
-    await ctx.send("We got 12 commands right now. The prefix to these commands are ?. The list of commands includes: ?hello, ?commands, ?hi, ?get_quote, ?qotd, ?office_quote, ?b99_quote, ?botstatus, ?8ball, ?dice, ?kick, and ?clear. ")
+    await ctx.send("We got 14 commands right now. The prefix to these commands are ?. The list of commands includes: ?hello, ?commands, ?hi, ?get_quote, ?qotd, ?office_quote, ?b99_quote, ?botstatus, ?8ball, ?dice, ?kick, ?ping, ?ban and ?clear. ")
 
 #this bot responds with a random response to the user's hi
 @client.command()
@@ -135,7 +135,33 @@ async def hi(ctx):
      ]    
     await ctx.send(random.choice(variable))
 
-    
+
+# can be used to check the user's ping
+@client.command()
+async def ping(ctx):
+    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+
+# can be used to ban someone by the user
+@client.command()
+async def ban(ctx, member: discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+    await ctx.send(f'Banned {member.mention} for {reason}')
+
+# can be used to unban someone by the user
+#@client.command()
+#async def unban(ctx, *, member):
+#    banned_users = await ctx.guild.bans()
+#    member_name, member_discriminator = member.split('#')
+
+#    for ban_entry in banned_users:
+#        user = ban_entry.user
+
+#        if(user.name, user.discriminator) == (member_name, member_discriminator):
+#            await ctx.guild.unban(user)
+#            await ctx.send(f'Unbanned {user.mention}')
+#            return
+       
+
 keep_alive()
 token = os.environ['Secret']
 client.run(token)
