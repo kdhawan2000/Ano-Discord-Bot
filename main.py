@@ -61,6 +61,12 @@ async def b99_quote(ctx):
     brooklyn_99_quotes = [
         'I\'m the human form of the 💯 emoji.',
         'Bingpot!',
+        'If I die, turn my tweets into a book.',
+        'Fine, but in protest, I’m walking over there extremely slowly!',
+        'Captain Wuntch, good to see you. But if you’re here, who’s guarding Hades?',
+        'Anyone over the age of six celebrating a birthday should go to hell!',
+        'OK, no hard feelings, but I hate you. Not joking. Bye.',
+        'I have decided to stop fighting it and lean in to the fact that I’m an idiot.',
         'DADDYYY',
         'Cool cool cool cool cool cool cool cool, no doubt no doubt no doubt no doubt.'
     ]
@@ -115,7 +121,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 # this commands informs the user about the bot
 @client.command()
 async def hello(ctx):
-    await ctx.send("Hello, thanks for using this bot. You can add this bot to your server using https://bit.ly/anodiscordbot . To learn more about the commands the bot supports right now, type in ?commands")
+    await ctx.send("Hello, thanks for using this bot. You can add this bot to your server using https://bit.ly/ano-bot . To learn more about the commands the bot supports right now, type in ?commands")
 
 # this command responds with a list of command the bot works with 
 @client.command()
