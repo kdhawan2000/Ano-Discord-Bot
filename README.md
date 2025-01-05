@@ -6,8 +6,6 @@ AnoBot is a Discord bot designed to provide personalized command functionality, 
 
 <img src="https://github.com/user-attachments/assets/c910b362-610e-433d-9dac-36bb1a521888" alt="image" width="300"/>
 
-this bot was started as it was noticed that the bots present on github serve a crucial purpose and someone (who runs a discord server) wanted to have their own (or mine as im close) bot with the ability to have their commands instead of relying a third party bot. as i am approachable and new commands can be added as needed. this project was to master using APIs and learn coding in Python.
-
 # Usage Guide 
 
 After adding Ano to your Discord server, you can start using its commands immediately. Below are examples of how the bot operates:
